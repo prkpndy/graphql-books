@@ -2,20 +2,24 @@
   "name": "server",
   "version": "1.0.0",
   "description": "A Simple GraphQL server",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prkpndy/graphql-books.git"
   },
   "author": "Prakhar Pandey",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1",
-    "express-graphql": "^0.12.0",
-    "graphql": "^15.5.0",
-    "mongoose": "^5.12.3"
+  "bugs": {
+    "url": "https://github.com/prkpndy/graphql-books/issues"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
+  "homepage": "https://github.com/prkpndy/graphql-books#readme",
+  "dependencies": {
+    "@apollo/server": "^4.9.5",
+    "graphql": "^16.8.1",
+    "mongoose": "^8.0.1"
   }
 }

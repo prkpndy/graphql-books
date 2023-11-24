@@ -1,11 +1,15 @@
-const http = require("http");
+const { startStandaloneServer } = require("@apollo/server/standalone");
 
-const app = require("./app");
+const server = require("./app");
 
 const PORT = process.env.PORT || 3000;
 
-const server = http.createServer(app);
+const start = async () => {
+    const { url } = await startStandaloneServer(server, {
+        listen: { port: PORT },
+    });
 
-server.listen(PORT);
+    console.log(`*** RUNNING THE SERVER AT ${url} ***`);
+};
 
-console.log(`*** RUNNING THE SERVER ON PORT ${PORT} ***`);
+start();
